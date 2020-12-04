@@ -20,7 +20,4 @@ print(count_trees(rows, 2, 1))
 print()
 
 # Part 2
-counts = [count_trees(rows, 1, 1), count_trees(rows, 1, 3), count_trees(rows, 1, 5), count_trees(rows, 1, 7), count_trees(rows, 2, 1)]
-print(counts)
-product = 1
-print(math.prod(counts))
+print(math.prod([count_trees(rows, 1, 1), count_trees(rows, 1, 3), count_trees(rows, 1, 5), count_trees(rows, 1, 7), count_trees(rows, 2, 1)]))
