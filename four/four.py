@@ -38,11 +38,11 @@ for passport in passports:
 
     creds = " ".join(creds)
     if "byr:" in creds and "iyr:" in creds and "eyr:" in creds and "hgt:" in creds and "hcl:" in creds and "ecl:" in creds and "pid:" in creds:
-        bool1 = (int(new["byr"]) >= 1920 and int(new["byr"]) <= 2002)
+        bool1 = (2002 >= int(new["byr"]) >= 1920)
 
-        bool2 = (int(new["iyr"]) >= 2010 and int(new["iyr"]) <= 2020)
+        bool2 = (2020 >= int(new["iyr"]) >= 2010)
 
-        bool3 = (int(new["eyr"]) >= 2020 and int(new["eyr"]) <= 2030)
+        bool3 = (2030 >= int(new["eyr"]) >= 2020)
 
         bool4_1 = (new["hgt"].endswith("cm") and isInt(new["hgt"][0:3], 10) and (int(new["hgt"][0:3]) >= 150 and int(new["hgt"][0:3]) <= 193))
         bool4_2 = (new["hgt"].endswith("in") and isInt(new["hgt"][0:2], 10) and (int(new["hgt"][0:2]) >= 59 and int(new["hgt"][0:2]) <= 76))
